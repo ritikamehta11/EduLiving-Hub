@@ -1,0 +1,59 @@
+﻿﻿@model EduHubLiving.Models.ViewModels.ShowCount
+
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+<style>
+        .flex-nav {
+            border-bottom: 0.5px solid grey;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+        h2 {
+            color: #274060;
+        }
+
+        .flex-nav > a {
+            text-decoration: none;
+            color: #335C81;
+        }
+
+        .book-list-item {
+            height: auto;
+            width: 100%;
+            padding: 0em 0em;
+            border-bottom: 1px solid grey;
+        }
+        /*
+        .flex-nav>a:hover{
+            color:
+        }
+    */
+
+        .book-title > a {
+            text-decoration: none;
+            color: darkslategrey;
+        }
+</style>
+<div class="flex-nav">
+    <h2>List of Books (<span>@Model.totalBooks</span>)</h2>
+    <a style=" " href="./New">New Book</a>
+</div>
+@foreach (var book in Model.Books)
+{
+    <div class="book-list-item">
+        <h5 class="book-title "><a href="./Show/@book.BookId">@book.Title</a></h5>
+    </div>
+    //<div>Publication Year: @book.PublicationYear</div>
+    //<div>Author: @book.Author.</div>
+
+
+}
+

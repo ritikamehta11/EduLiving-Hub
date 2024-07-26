@@ -1,0 +1,38 @@
+﻿﻿@model EduHubLiving.Models.AuthorDto
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+
+<style>
+    h5 {
+        color: #274060;
+        text-transform: capitalize;
+    }
+
+    h4 {
+        color: darkslategrey;
+        text-transform: capitalize;
+    }
+
+    p {
+        text-transform: capitalize;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        color: #D0DB97;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+        text-transform: capitalize;
+    }
+</style>
+
+<h2>Delete Author</h2>
+<h4>@Model.Name </h4>
+<p>@Model.Bio</p>
+<form action="/author/delete/@Model.AuthorId" method="POST">
+    <button class="btn-primary" type="submit" value="Delete Author">Delete Author</button>
+
+</form> 
