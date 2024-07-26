@@ -1,0 +1,85 @@
+﻿﻿﻿@model EduHubLiving.Models.ViewModels.UpdateBook
+
+@{
+    ViewBag.Title = "Edit";
+}
+<style>
+    h2 {
+        border-bottom: 0.5px solid grey;
+        color: #274060;
+    }
+
+    label {
+        width: 30%;
+    }
+
+    .input-field {
+        padding: 0.5em 0em;
+    }
+
+    input, select {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 0.4em;
+        width: 40%;
+        text-transform: capitalize;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        color: #D0DB97;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+        text-transform: capitalize;
+    }
+</style>
+<h2>Update Book</h2>
+<form action="/book/Update/@Model.SelectedBook.BookId" method="POST">
+    <div style="display:none;" class="input-field">
+        @* Pass through the book ID *@
+        <input type="text" name="BookId" value="@Model.SelectedBook.BookId" />
+    </div>
+    <div class="input-field">
+        <label>Name:</label> <input type="text" name="Title" value="@Model.SelectedBook.Title" />
+    </div>
+    <div class="input-field">
+        <label>PublicationYear:</label> <input type="number" name="PublicationYear" value="@Model.SelectedBook.PublishDate" />
+    </div>
+    <div class="input-field">
+        <label>Author:</label>
+
+        <select name="AuthorId">
+            @foreach (var author in Model.AuthorOptions)
+            {
+                string selected = "";
+                if (author.AuthorId == Model.SelectedBook.Author.AuthorId)
+                {
+                    selected = "selected";
+                }
+                <option value="@author.AuthorId" @selected>@author.Name</option>
+
+            }
+        </select>
+        <div class="input-field">
+            <label>Genre:</label>
+
+            <select name="GenreId">
+                @foreach (var genre in Model.GenreOptions)
+                {
+                    string selected = "";
+                    if (genre.GenreId == Model.SelectedBook.Genre.GenreId)
+                    {
+                        selected = "selected";
+                    }
+                    <option value="@genre.GenreId" @selected>@genre.Name</option>
+
+                }
+            </select>
+        </div>
+    </div>
+    <div>
+        <button class="btn-primary" type="submit" value="Update Book">Update book</button>
+
+    </div>
+</form>

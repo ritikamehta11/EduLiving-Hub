@@ -6,14 +6,14 @@ namespace EduHubLiving.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class FreshIinstallMigrtion : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
+    public sealed partial class addedmodels : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FreshIinstallMigrtion));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedmodels));
         
         string IMigrationMetadata.Id
         {
-            get { return "202407132102107_FreshIinstallMigrtion"; }
+            get { return "202407150501554_added-models"; }
         }
         
         string IMigrationMetadata.Source

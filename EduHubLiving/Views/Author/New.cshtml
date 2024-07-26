@@ -1,0 +1,51 @@
+﻿﻿@model EduHubLiving.Models.AuthorDto
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+    h2 {
+        border-bottom: 0.5px solid grey;
+        color: #274060;
+    }
+
+    label {
+        width: 30%;
+    }
+
+    .input-field {
+        padding: 0.5em 0em;
+    }
+
+    input {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 0.4em;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        color: #D0DB97;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+    }
+</style>
+
+
+<h2>Add Author</h2>
+<form action="/Author/Create" method="POST">
+    <div class="input-field">
+        <label>Name:</label> <input type="text" name="Name" />
+    </div>
+    <div class="input-field">
+        <label>Bio:</label> <input type="text" name="Bio" />
+    </div>
+
+
+
+    <div>
+        <button class="btn-primary" type="submit" value="Add Author"> Add Author</button>
+
+    </div>
+</form> 
