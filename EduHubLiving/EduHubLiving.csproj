@@ -202,13 +202,13 @@
     <Compile Include="Migrations\202407150213071_InitialCreate.Designer.cs">
       <DependentUpon>202407150213071_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202407150501554_added-models.cs" />
-    <Compile Include="Migrations\202407150501554_added-models.Designer.cs">
-      <DependentUpon>202407150501554_added-models.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202407231033400_CreatePropertyListingAndMediaMigration.cs" />
     <Compile Include="Migrations\202407231033400_CreatePropertyListingAndMediaMigration.Designer.cs">
       <DependentUpon>202407231033400_CreatePropertyListingAndMediaMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407270326468_UpdateToMigration.cs" />
+    <Compile Include="Migrations\202407270326468_UpdateToMigration.Designer.cs">
+      <DependentUpon>202407270326468_UpdateToMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -359,11 +359,11 @@
     <EmbeddedResource Include="Migrations\202407150213071_InitialCreate.resx">
       <DependentUpon>202407150213071_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407150501554_added-models.resx">
-      <DependentUpon>202407150501554_added-models.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407231033400_CreatePropertyListingAndMediaMigration.resx">
       <DependentUpon>202407231033400_CreatePropertyListingAndMediaMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407270326468_UpdateToMigration.resx">
+      <DependentUpon>202407270326468_UpdateToMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
