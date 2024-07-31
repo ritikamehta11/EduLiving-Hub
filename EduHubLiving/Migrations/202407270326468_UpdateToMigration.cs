@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addedmodels : DbMigration
+    public partial class UpdateToMigration : DbMigration
     {
         public override void Up()
         {
@@ -26,7 +26,7 @@
                         BookId = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         PublishDate = c.Int(nullable: false),
-                        plot = c.String(),
+                        Plot = c.String(),
                         CreatedAt = c.DateTime(nullable: false),
                         UpdatedAt = c.DateTime(nullable: false),
                         AuthorId = c.Int(nullable: false),
