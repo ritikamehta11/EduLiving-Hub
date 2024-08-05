@@ -19,3 +19,13 @@ To set up and run the application locally, follow these steps:
 4. Open the Package Manager Console (Tools > NuGet Package Manager > Package Manager Console) and run the `Update-Database` command.
 5. Check that the database is created using (View > SQL Server Object Explorer > MSSQLLocalDb > ...).
 6. Run the application using the built-in development server.
+
+# Components Done(Assignee)
+
+- Accommodation- PropertyListing Controllers, models, views (Joshua)
+
+# Pending Items
+
+- Refine public views pages/admin(Joshua)
+- lightbox for images of accomodation details page(Joshua)
+- WYSIWG editor on create & update of accommodation listing(Joshua)
