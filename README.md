@@ -23,6 +23,7 @@ To set up and run the application locally, follow these steps:
 # Components Done(Assignee)
 
 - Accommodation- PropertyListing Controllers, models, views (Joshua)
+- Learn - Library System Controllers, Models, Views (Ritika)
 
 # Pending Items
 
