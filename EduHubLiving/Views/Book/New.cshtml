@@ -1,0 +1,59 @@
+﻿﻿﻿@model IEnumerable<EduHubLiving.Models.BookDto>
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+    h2 {
+        border-bottom: 0.5px solid grey;
+        color: #274060;
+    }
+
+    label {
+        width: 30%;
+    }
+
+    .input-field {
+        padding: 0.5em 0em;
+    }
+
+    input {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 0.4em;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        color: #D0DB97;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+    }
+</style>
+
+<h2>Add Book</h2>
+<form action="/Book/Create" method="POST">
+    <div class="input-field">
+        <label>Title:</label> <input type="text" name="Title" />
+    </div>
+    <div class="input-field">
+        <label>Publication Year:</label> <input type="number" name="PublicationYear" />
+    </div>
+    <div class="input-field">
+        <label>AuthorId:</label> <input type="number" name="AuthorID" />
+    </div>
+    <div class="input-field">
+        <label>GenreId:</label> <input type="number" name="GenreID" />
+    </div>
+
+
+    <div>
+        @*<input class="btn-primary" type="submit" value="Add Book" />*@
+        <button class="btn-primary" type="submit" value="Add Book">Add Book</button>
+
+    </div>
+</form>
