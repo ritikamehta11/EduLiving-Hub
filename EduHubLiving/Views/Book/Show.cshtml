@@ -1,0 +1,70 @@
+﻿﻿@model EduHubLiving.Models.BookDto
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<style>
+
+    button {
+        text-transform: capitalize;
+    }
+
+    h2 {
+        margin-top: 1em;
+        color: #274060;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #335C81;
+        text-transform: capitalize;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+    }
+
+        .btn-primary > a {
+            text-decoration: none;
+            color: #D0DB97;
+        }
+
+    .flex-nav {
+        border-bottom: 0.5px solid grey;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+
+        .flex-nav > a {
+            text-decoration: none;
+            color: #335C81;
+        }
+</style>
+
+
+<div class="flex-nav">
+    <h2>@Model.Title</h2>
+    <a href="/Book/list">List of books</a>
+</div>
+<p>Publication Year: @Model.PublishDate</p>
+
+
+<p>
+    Author: @Model.Author.Name
+</p>
+<p>
+    Plot : @Model.Plot
+</p>
+<p>
+    <button class="btn-primary bg-danger"><a href="@Url.Action("DeleteConfirm", "Book", new { id = Model.BookId })">Delete book</a></button>
+    <button class="btn-primary "><a href="@Url.Action("Edit", "Book", new { id = Model.BookId })">update book</a></button>
+
+</p>
+

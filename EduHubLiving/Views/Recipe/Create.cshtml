@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Recipe</h2>
+<form action="/Recipe/Create" method="POST">
+    <div>
+        <label for="recipe_name">Recipe Name</label>
+        <input name="RecipeName" id="recipe_name" type="text" />
+
+        <label for="recipe_type">Recipe Type</label>
+        <input name="RecipeType" id="recipe_type" type="text" />
+
+        <label for="recipe_description">Recipe Description</label>
+        <input name="RecipeDescription" id="recipe_description" type="text" />
+
+        <label for="recipe_instructions">Recipe Instructions</label>
+        <input name="RecipeInstructions" id="recipe_instructions" type="text" />
+    </div>
+</form>
+
