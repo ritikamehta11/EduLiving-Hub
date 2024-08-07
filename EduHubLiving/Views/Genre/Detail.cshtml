@@ -1,0 +1,82 @@
+﻿﻿﻿@model EduHubLiving.Models.ViewModels.DetailGenre
+
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<style>
+    a {
+        text-decoration: none;
+        color: #335C81;
+    }
+
+    button {
+        text-transform: capitalize;
+    }
+
+    h2 {
+        margin-top: 1em;
+        color: #274060;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #335C81;
+        text-transform: capitalize;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+    }
+
+        .btn-primary > a {
+            text-decoration: none;
+            color: #D0DB97;
+        }
+
+    .flex-nav {
+        border-bottom: 0.5px solid grey;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h5 {
+        color: #335C81;
+    }
+
+    .booklist > a {
+        color: lightslategray
+    }
+</style>
+
+
+<div class="flex-nav">
+    <h2>@Model.SelectedGenre.Name</h2>
+    <a href="/Genre/List">Go back to list</a>
+</div>
+
+<p>
+    GenreId : @Model.SelectedGenre.GenreId
+    <br />
+
+   
+</p>
+
+<div class="booklist">
+    <h5>Books Written in @Model.SelectedGenre.Name:</h5>
+    @foreach (var book in Model.BooksInGenre)
+    {
+
+        <a href="/Book/Show/@book.BookId">@book.Title</a><br />
+
+    }
+</div>
+<button type="submit" class="btn-primary"><a href="/Genre/Edit/@Model.SelectedGenre.GenreId">Update</a></button>
+
+<button type="submit" class="btn-primary bg-danger"><a href="/Genre/DeleteConfirm/@Model.SelectedGenre.GenreId">Delete</a></button>
