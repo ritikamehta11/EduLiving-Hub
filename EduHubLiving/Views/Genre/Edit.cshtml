@@ -1,0 +1,54 @@
+﻿﻿﻿@model EduHubLiving.Models.GenreDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<style>
+    h2 {
+        border-bottom: 0.5px solid grey;
+        color: #274060;
+    }
+
+    label {
+        width: 30%;
+    }
+
+    .input-field {
+        padding: 0.5em 0em;
+    }
+
+    input, select {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 0.4em;
+        width: 40%;
+        text-transform: capitalize;
+    }
+
+    .btn-primary {
+        background-color: #274060;
+        color: #D0DB97;
+        border: 1px solid transparent;
+        padding: 0.3em 0.8em;
+        margin-top: 1em;
+        text-transform: capitalize;
+    }
+</style>
+<h2>Update Genre</h2>
+<form action="/Genre/Update/@Model.GenreId" method="POST">
+    <div style="display:none;" class="input-field">
+        @* Pass through the Genre ID *@
+        <input type="text" name="GenreID" value="@Model.GenreId" />
+    </div>
+    <div class="input-field">
+        <label>Name:</label> <input type="text" name="Name" value="@Model.Name" />
+    </div>
+
+
+    <div>
+        <button class="btn-primary" type="submit" value="Update Genre">Update Genre</button>
+
+    </div>
+</form> 
