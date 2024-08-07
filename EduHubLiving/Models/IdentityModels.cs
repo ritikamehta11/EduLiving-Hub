@@ -34,8 +34,15 @@ namespace EduHubLiving.Models
         public DbSet<PropertyListing> PropertyListings { get; set; }
         public DbSet<Media> Media { get; set; }
 
+        public DbSet<Recipe> Recipes { get; set; }
+
+        public DbSet<Ingredients> Ingredients { get; set; }
+
+        public DbSet<RecipeIngredients> RecipeIngredients { get; set; }
 
         public DbSet<Genre> Genres { get; set; }
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

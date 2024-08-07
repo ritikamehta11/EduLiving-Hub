@@ -1,0 +1,19 @@
+﻿﻿@model EduHubLiving.Models.RecipeDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Recipe Details</h2>
+
+<div>
+    <h4>Recipe Name: @Model.RecipeName</h4>
+    <p>Recipe Type: @Model.RecipeType</p>
+    <p>Description: @Model.RecipeDescription</p>
+    <p>Instructions: @Model.RecipeInstructions</p>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RecipeID }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Back to List", "List", null, new { @class = "btn btn-default" })
+</p>
